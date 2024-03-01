@@ -1,7 +1,7 @@
 import React, {useEffect, useState} from 'react'
 import EmployeeService from "../services/EmployeeService";
 
-const EmployeeListComponent = () => {
+function EmployeeListComponent() {
     const [users, setUsers] = useState([]);
 
     useEffect(() => { setUsers(EmployeeService.getAllEmployees.data); }, []);

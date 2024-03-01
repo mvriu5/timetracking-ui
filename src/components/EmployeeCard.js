@@ -1,7 +1,7 @@
 import React, {useEffect, useState} from "react";
 import EmployeeService from "../services/EmployeeService";
 
-function EmployeeCard(id) {
+function EmployeeCard({id}) {
     const [user, setUser] = useState([]);
 
     useEffect(() => { setUser(EmployeeService.getEmployee(id).data); }, []);
