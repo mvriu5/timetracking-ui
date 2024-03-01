@@ -1,23 +1,12 @@
 import React from 'react';
-import {BrowserRouter as Router, Route} from 'react-router-dom'
-import ListEmployeeComponent from './components/ListEmployeeComponent';
-import CreateEmployeeComponent from './components/CreateEmployeeComponent';
-import ViewEmployeeComponent from './components/ViewEmployeeComponent';
+import EmployeeListComponent from './components/EmployeeListComponent';
+import EmployeeCard from "./components/EmployeeCard";
 
 function App() {
     return (
         <div>
-            <Router>
-                <div className="container">
-                    <switch>
-                        <Route path = "/" exact component = {ListEmployeeComponent}></Route>
-                        <Route path = "/employee" component = {ListEmployeeComponent}></Route>
-                        <Route path = "/add-employee/:id" component = {CreateEmployeeComponent}></Route>
-                        <Route path = "/view-employee/:id" component = {ViewEmployeeComponent}></Route>
-                        {/* <Route path = "/update-employee/:id" component = {UpdateEmployeeComponent}></Route> */}
-                    </switch>
-                </div>
-            </Router>
+            <h1>Employee Management</h1>
+            <EmployeeCard id={1}/>
         </div>
     );
 }
